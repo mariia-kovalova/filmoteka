@@ -1,0 +1,50 @@
+import styled from '@emotion/styled';
+
+export const SearchFormStyled = styled.form`
+  display: flex;
+  border-bottom: 0.5px solid var(--color-text-light);
+  transition: border-bottom 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 768px) {
+    width: 336px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 394px;
+  }
+
+  &:focus-within {
+    border-bottom: 0.5px solid var(--color-accent);
+  }
+`;
+
+export const Input = styled.input`
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  color: var(--color-text-light);
+  outline: none;
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 1.14;
+    color: #ffffff4f;
+  }
+`;
+
+export const SearchBtn = styled.button`
+  background-color: transparent;
+  border: none;
+  color: var(--color-text-light);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: var(--color-accent);
+  }
+`;
