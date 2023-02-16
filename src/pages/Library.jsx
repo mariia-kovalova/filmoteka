@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { Header } from 'components/Header';
-import { BtnsList, LibraryBtn } from 'components/Global.styled';
+import { BtnsList, LibraryBtn, Main } from 'components/Global.styled';
+import { Footer } from 'components/Footer';
 
 export const Library = () => {
   return (
@@ -15,9 +16,12 @@ export const Library = () => {
           </li>
         </BtnsList>
       </Header>
-      <section>
-        <Outlet />
-      </section>
+      <Main>
+        <section>
+          <Outlet />
+        </section>
+      </Main>
+      <Footer />
     </>
   );
 };

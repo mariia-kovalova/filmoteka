@@ -60,3 +60,7 @@ export const LibraryBtn = styled(NavLink)`
     padding: 13px 48px;
   }
 `;
+
+export const Main = styled.main`
+  min-height: calc(100vh - 280px);
+`;
