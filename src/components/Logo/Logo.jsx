@@ -4,7 +4,7 @@ import { LogoStyled, LogoText } from './Logo.styled';
 
 export const Logo = () => {
   return (
-    <LogoStyled href="./">
+    <LogoStyled to="/" end>
       <IconContext.Provider value={{ size: '1.5em' }}>
         <FiFilm />
       </IconContext.Provider>
