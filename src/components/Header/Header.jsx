@@ -1,21 +1,15 @@
-import PropTypes from 'prop-types';
 import { Container } from 'components/Global.styled';
 import { Navigation } from 'components/Navigation';
 import { HeaderStyled, Wrap } from './Header.styled';
 
-export const Header = ({ children }) => {
+export const Header = () => {
   return (
-    <HeaderStyled id="header">
+    <HeaderStyled>
       <Container>
-        <Wrap className="header__wrapper">
+        <Wrap>
           <Navigation />
         </Wrap>
-        {children}
       </Container>
     </HeaderStyled>
   );
-};
-
-Header.propTypes = {
-  children: PropTypes.node,
 };

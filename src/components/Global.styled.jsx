@@ -19,6 +19,12 @@ export const Container = styled.div`
   }
 `;
 
+export const DarkSection = styled.section`
+  background-color: #252d31;
+  padding-top: 20px;
+  padding-bottom: 40px;
+`;
+
 export const BtnsList = styled.ul`
   display: flex;
   justify-content: center;
@@ -62,5 +68,5 @@ export const LibraryBtn = styled(NavLink)`
 `;
 
 export const Main = styled.main`
-  min-height: calc(100vh - 280px);
+  min-height: calc(100vh - 178px);
 `;
