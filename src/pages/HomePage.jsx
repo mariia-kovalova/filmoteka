@@ -1,17 +1,25 @@
-import { Gallery } from 'components/Gallery';
-import { DarkSection } from 'components/Global.styled';
 import { SearchForm } from 'components/SearchForm/SearchForm';
-import { Outlet } from 'react-router-dom';
+import { Gallery } from 'components/Gallery';
+import {
+  Container,
+  DarkSection,
+  LightSection,
+  Main,
+} from 'components/Global.styled';
 
 export const HomePage = () => {
   return (
-    <>
+    <Main>
       <DarkSection>
-        <SearchForm />
+        <Container>
+          <SearchForm />
+        </Container>
       </DarkSection>
-      <section>
-        <Outlet />
-      </section>
-    </>
+      <LightSection>
+        <Container>
+          <Gallery />
+        </Container>
+      </LightSection>
+    </Main>
   );
 };

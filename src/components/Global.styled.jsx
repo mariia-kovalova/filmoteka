@@ -25,6 +25,11 @@ export const DarkSection = styled.section`
   padding-bottom: 40px;
 `;
 
+export const LightSection = styled.section`
+  padding-top: 40px;
+  padding-bottom: 40px;
+`;
+
 export const BtnsList = styled.ul`
   display: flex;
   justify-content: center;
