@@ -1,6 +1,6 @@
 import { AiFillHeart } from 'react-icons/ai';
 import { IconContext } from 'react-icons';
-import { Container } from 'components/Global.styled';
+import { Container } from 'components/GlobalStyles.styled';
 import { FooterStyled, Wrap } from './Footer.styled';
 
 export const Footer = () => {

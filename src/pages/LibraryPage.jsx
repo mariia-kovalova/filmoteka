@@ -1,15 +1,17 @@
 import { Outlet } from 'react-router-dom';
 import {
   BtnsList,
+  Container,
   DarkSection,
   LibraryBtn,
+  LightSection,
   Main,
-} from 'components/Global.styled';
+} from 'components/GlobalStyles.styled';
 
-export const LibraryPage = () => {
-  return (
-    <Main>
-      <DarkSection>
+export const LibraryPage = () => (
+  <Main>
+    <DarkSection>
+      <Container>
         <BtnsList>
           <li>
             <LibraryBtn to="watched">Watched</LibraryBtn>
@@ -18,10 +20,12 @@ export const LibraryPage = () => {
             <LibraryBtn to="queue">Queue</LibraryBtn>
           </li>
         </BtnsList>
-      </DarkSection>
-      <section>
+      </Container>
+    </DarkSection>
+    <LightSection>
+      <Container>
         <Outlet />
-      </section>
-    </Main>
-  );
-};
+      </Container>
+    </LightSection>
+  </Main>
+);

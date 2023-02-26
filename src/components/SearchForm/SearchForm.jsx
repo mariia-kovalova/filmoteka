@@ -3,7 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
 import { IconContext } from 'react-icons';
 import { Input, SearchBtn, SearchFormStyled } from './SearchForm.styled';
-import { Container } from 'components/Global.styled';
+import { Container } from 'components/GlobalStyles.styled';
 
 export const SearchForm = () => {
   const [query, setQuery] = useState('');
@@ -40,6 +40,3 @@ export const SearchForm = () => {
     </Container>
   );
 };
-
-// react form with hooks
-// https://react-hook-form.com/get-started

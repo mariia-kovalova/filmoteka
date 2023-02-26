@@ -5,21 +5,19 @@ import {
   DarkSection,
   LightSection,
   Main,
-} from 'components/Global.styled';
+} from 'components/GlobalStyles.styled';
 
-export const HomePage = () => {
-  return (
-    <Main>
-      <DarkSection>
-        <Container>
-          <SearchForm />
-        </Container>
-      </DarkSection>
-      <LightSection>
-        <Container>
-          <Gallery />
-        </Container>
-      </LightSection>
-    </Main>
-  );
-};
+export const HomePage = () => (
+  <Main>
+    <DarkSection>
+      <Container>
+        <SearchForm />
+      </Container>
+    </DarkSection>
+    <LightSection>
+      <Container>
+        <Gallery />
+      </Container>
+    </LightSection>
+  </Main>
+);

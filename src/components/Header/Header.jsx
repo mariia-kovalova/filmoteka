@@ -1,4 +1,4 @@
-import { Container } from 'components/Global.styled';
+import { Container } from 'components/GlobalStyles.styled';
 import { Navigation } from 'components/Navigation';
 import { HeaderStyled, Wrap } from './Header.styled';
 
