@@ -1,5 +1,4 @@
-import { Logo } from 'components/Logo/Logo';
-// import PropTypes from 'prop-types';
+import { Logo } from 'components/Logo';
 import { NavBar, NavBarLink, NavBarList } from './Navigation.styled';
 
 export const Navigation = () => {

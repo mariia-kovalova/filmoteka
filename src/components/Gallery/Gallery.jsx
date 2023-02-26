@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import { GalleryItem } from 'components/GalleryItem';
-import { toast } from 'react-toastify';
-import { GalleryList } from './Gallery.styled';
 import { getFilmsByKeyword, getTrendingFilms } from 'utils/film-service';
-import { Loader } from 'components/Loader';
 import { usePagination } from 'hooks/usePagination';
-import { MuiPagination } from 'components/MuiPagination/MuiPagination';
+import { toast } from 'react-toastify';
+import { GalleryItem } from 'components/GalleryItem';
+import { Loader } from 'components/Loader';
+import { MuiPagination } from 'components/MuiPagination';
+import { GalleryList } from './Gallery.styled';
 
 const errorText = {
   noResults:
