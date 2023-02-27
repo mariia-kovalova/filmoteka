@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
-import { Link } from 'react-router-dom';
 
-export const CardLink = styled(Link)`
+export const CardLink = styled.a`
   display: flex;
   flex-direction: column;
   width: 280px;

@@ -1,5 +1,4 @@
 import { Pagination } from '@mui/material';
-// import usePagination from '@mui/material/usePagination/usePagination';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Wrap } from './MuiPagibnation.styled';
 
@@ -10,17 +9,18 @@ const theme = createTheme({
 });
 
 export const MuiPagination = ({ count, page, onChange }) => {
-  return (
-    <ThemeProvider theme={theme}>
-      <Wrap>
-        <Pagination
-          color="primary"
-          shape="rounded"
-          count={count}
-          page={page}
-          onChange={onChange}
-        />
-      </Wrap>
-    </ThemeProvider>
-  );
+  if (count > 1)
+    return (
+      <ThemeProvider theme={theme}>
+        <Wrap>
+          <Pagination
+            color="primary"
+            shape="rounded"
+            count={count}
+            page={page}
+            onChange={onChange}
+          />
+        </Wrap>
+      </ThemeProvider>
+    );
 };

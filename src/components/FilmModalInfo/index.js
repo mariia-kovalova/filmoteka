@@ -1,0 +1,1 @@
+export { FilmModalInfo } from './FilmModalInfo';

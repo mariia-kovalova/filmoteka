@@ -25,3 +25,9 @@ export const App = () => (
 // react form with hooks
 // https://react-hook-form.com/get-started
 // animation on scrollUpBtn
+// спробувати зберігати масив жанрів на редаксі
+// https://redux-toolkit.js.org/api/createSlice - по новому - через білдер
+// error no results
+// Film page
+// Modal - в кожній картці
+// scroll modal window
