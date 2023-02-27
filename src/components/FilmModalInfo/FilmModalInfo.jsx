@@ -25,8 +25,6 @@ import {
 export const FilmModalInfo = ({ id }) => {
   const dispatch = useDispatch();
   const { data, isLoading, error } = useSelector(selectFilm);
-  console.log(data);
-
   const {
     poster_path = '',
     title = 'Title',
