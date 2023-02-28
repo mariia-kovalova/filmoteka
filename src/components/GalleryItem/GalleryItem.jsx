@@ -1,4 +1,3 @@
-import { Button } from '@mui/material';
 import { FilmModalInfo } from 'components/FilmModalInfo';
 import { Modal } from 'components/Modal';
 import PropTypes from 'prop-types';
@@ -29,15 +28,12 @@ export const GalleryItem = ({ item }) => {
   const src = getSrc(poster_path);
   return (
     <>
-      <CardLink to="/filmpage">
+      <CardLink onClick={() => handleOpenModal()}>
         <Poster src={src} alt={title} loading="lazy" />
         <Title>{convertedTitle}</Title>
         <Text>
           {genresList} | {year}
         </Text>
-        <Button type="button" onClick={() => handleOpenModal()}>
-          Click me
-        </Button>
       </CardLink>
 
       {showModal && (

@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from '@emotion/styled/macro';
 
 export const CardLink = styled.a`
   display: flex;
@@ -6,6 +6,7 @@ export const CardLink = styled.a`
   width: 280px;
 
   overflow: hidden;
+  cursor: pointer;
 
   @media screen and (min-width: 768px) {
     flex-basis: calc((100% - 32px) / 2);
@@ -16,30 +17,18 @@ export const CardLink = styled.a`
     flex-basis: calc((100% - 32px) / 3);
     width: 394px;
   }
-
-  &:hover .card__img,
-  &:focus .card__img {
-    transform: scale(0.95);
-  }
-
-  &:hover .card__title,
-  &:focus .card__title {
-    transform: translateX(10px);
-    color: #f86c00;
-  }
-
-  &:hover .card__text,
-  &:focus .card__text {
-    transform: translateX(10px);
-    color: var(--color-text-dark);
-  }
 `;
+
 export const Poster = styled.img`
   width: 100%;
   height: 398px;
   margin-bottom: 10px;
   border-radius: 5px;
   transition: transform 250ms linear;
+
+  ${CardLink}:hover &, ${CardLink}:focus & {
+    transform: scale(0.95);
+  }
 
   @media screen and (min-width: 768px) {
     height: 455px;
@@ -62,6 +51,11 @@ export const Title = styled.h2`
   color: var(--color-text-dark);
   transition: transform 300ms ease-in-out, color 300ms ease-in-out;
 
+  ${CardLink}:hover &, ${CardLink}:focus & {
+    transform: translateX(10px);
+    color: #f86c00;
+  }
+
   @media screen and (min-width: 1280px) {
     font-size: 20px;
     line-height: 1.2;
@@ -76,6 +70,11 @@ export const Text = styled.p`
 
   color: var(--color-card__text);
   transition: transform 300ms ease-in-out, color 300ms ease-in-out;
+
+  ${CardLink}:hover &, ${CardLink}:focus & {
+    transform: translateX(10px);
+    color: var(--color-text-dark);
+  }
 
   @media screen and (min-width: 1280px) {
     font-size: 20px;

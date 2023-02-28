@@ -34,7 +34,7 @@ export const FilmModalInfo = ({ id }) => {
     popularity = 93.983,
     overview = 'Overview',
     genres = ['Action', 'Comedy', 'Thriller'],
-    video = false,
+    // video = false,
   } = data;
 
   useEffect(() => {
