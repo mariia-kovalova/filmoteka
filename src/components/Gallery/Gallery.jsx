@@ -8,6 +8,7 @@ import { GalleryItem } from 'components/GalleryItem';
 import { Loader } from 'components/Loader';
 import { MuiPagination } from 'components/MuiPagination';
 import { GalleryList } from './Gallery.styled';
+import { useSearchParams } from 'react-router-dom';
 
 const errorText = {
   noResults:
@@ -28,7 +29,7 @@ const errorInfo = text => {
 };
 
 export const Gallery = () => {
-  const [query, setQuery] = useState('');
+  let [searchParams] = useSearchParams();
   const [page, setPage] = useState(1);
   const dispatch = useDispatch();
   const {
@@ -39,8 +40,8 @@ export const Gallery = () => {
   const paginationData = usePagination(total_pages);
 
   useEffect(() => {
-    dispatch(getFilms({ query, page }));
-  }, [dispatch, page, query]);
+    dispatch(getFilms({ query: searchParams.get('query') ?? '', page }));
+  }, [dispatch, page, searchParams]);
 
   const handleChange = (e, nextPage) => {
     setPage(nextPage);

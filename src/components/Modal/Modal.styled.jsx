@@ -5,19 +5,28 @@ export const Overlay = styled.div`
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1200;
+  overflow: auto;
+  padding: 20px;
 `;
 
 export const ModalStyled = styled.div`
   background-color: var(--color-bg-primary);
-  position: relative;
-  max-width: calc(100vw - 48px);
-  max-height: calc(100vh - 24px);
+  position: absolute;
+  top: 20px;
+
+  @media screen and (min-width: 768px) {
+    top: 50%;
+    transform: translate(0, -50%);
+    max-width: calc(100vw - 48px);
+    max-height: calc(100vh - 24px);
+  }
 `;
 
 export const ModalBtn = styled.button`

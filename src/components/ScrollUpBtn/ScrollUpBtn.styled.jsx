@@ -1,4 +1,17 @@
+import { keyframes } from '@emotion/css';
 import styled from '@emotion/styled';
+
+const show = keyframes`
+  from {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  to {
+   opacity: 1;
+    pointer-events: all;
+  }
+`;
 
 export const ScrollBtn = styled.div`
   position: fixed;
@@ -15,6 +28,8 @@ export const ScrollBtn = styled.div`
   color: var(--color-text-light);
 
   border-radius: 50%;
+  transition: background-color 250ms linear;
+  animation: ${show} 1s linear;
 
   &:hover {
     background-color: var(--color-card__text);

@@ -14,7 +14,12 @@ export const Modal = ({ children, onCloseModal }) => {
       }
     };
     window.addEventListener('keydown', onKeyDown);
-    return () => window.removeEventListener('keydown', onKeyDown);
+    document.body.classList.add('stop-scroll');
+    console.log(document.body);
+    return () => {
+      window.removeEventListener('keydown', onKeyDown);
+      document.body.classList.remove('stop-scroll');
+    };
   }, [onCloseModal]);
 
   const handleOverlayClick = ({ currentTarget, target }) => {

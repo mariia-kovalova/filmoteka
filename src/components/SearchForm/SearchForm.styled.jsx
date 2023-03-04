@@ -2,12 +2,13 @@ import styled from '@emotion/styled';
 
 export const SearchFormStyled = styled.form`
   display: flex;
+  justify-content: center;
+  margin: 0 auto;
   border-bottom: 0.5px solid var(--color-text-light);
   transition: border-bottom 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @media screen and (min-width: 768px) {
     width: 336px;
-    margin: 0 auto;
   }
 
   @media screen and (min-width: 1280px) {

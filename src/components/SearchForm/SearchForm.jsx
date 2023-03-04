@@ -3,7 +3,6 @@ import { useSearchParams } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
 import { IconContext } from 'react-icons';
 import { Input, SearchBtn, SearchFormStyled } from './SearchForm.styled';
-import { Container } from 'components/GlobalStyles.styled';
 
 export const SearchForm = () => {
   const [query, setQuery] = useState('');
@@ -17,12 +16,11 @@ export const SearchForm = () => {
     e.preventDefault();
     if (query !== '') {
       setSearchParams({ query });
-      //sand info to reducer
     }
   };
 
   return (
-    <Container>
+    <>
       <SearchFormStyled onSubmit={handleSearchFormSubmit}>
         <Input
           type="text"
@@ -37,6 +35,6 @@ export const SearchForm = () => {
           </IconContext.Provider>
         </SearchBtn>
       </SearchFormStyled>
-    </Container>
+    </>
   );
 };

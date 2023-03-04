@@ -23,15 +23,12 @@ export const GlobalStyles = css`
 
   html {
     scroll-behavior: smooth;
-    box-sizing: border-box;
-    width: 100vw;
-    overflow-x: hidden;
   }
 
   *,
   *::before,
   *::after {
-    box-sizing: inherit;
+    box-sizing: border-box;
   }
 
   body {
@@ -40,6 +37,11 @@ export const GlobalStyles = css`
     color: var(--color-text-light);
     padding: 0;
     margin: 0;
+  }
+
+  body.stop-scroll {
+    height: 100vh;
+    overflow: hidden;
   }
 
   h1,

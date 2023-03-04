@@ -19,15 +19,13 @@ export const App = () => (
 
 // https://github.com/veras92/i-scream-film
 
-// додати авторизацію + login and logut buttons
+// додати авторизацію + login and logout buttons
 // not found
 // onError
 // react form with hooks
 // https://react-hook-form.com/get-started
-// animation on scrollUpBtn
+// animation on scrollUpBtn - on unmount
 // спробувати зберігати масив жанрів на редаксі
 // https://redux-toolkit.js.org/api/createSlice - по новому - через білдер
 // error no results
 // Film page
-// Modal - в кожній картці
-// scroll modal window

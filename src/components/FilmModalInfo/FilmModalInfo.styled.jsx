@@ -1,47 +1,47 @@
 import styled from '@emotion/styled';
 // import { Link } from 'react-router-dom';
+// export const CardLink = styled(Link)``;
 
 export const Wrap = styled.div`
   color: var(--color-text-dark);
-
   width: 280px;
-  min-height: 400px;
+  min-height: 600px;
   padding: 40px 20px;
 
   @media screen and (min-width: 768px) {
     display: flex;
+    justify-content: space-between;
     column-gap: 68px;
-
     width: 704px;
-
+    min-height: 478px;
     padding: 40px 36px;
   }
 
   @media screen and (min-width: 1280px) {
     column-gap: 16px;
-
     padding: 40px 12px;
     width: 806px;
+    min-height: 558px;
   }
 `;
 
 export const Thumb = styled.div`
   overflow: hidden;
-
-  height: 357px;
-  width: 240px;
-  margin-bottom: 20px;
-
   border-radius: 5px;
 
+  @media screen and (max-width: 768px) {
+    width: 240px;
+    height: 357px;
+    margin-bottom: 20px;
+  }
+
   @media screen and (min-width: 768px) {
+    flex-grow: 1;
     width: 264px;
-    height: 374px;
-    margin-bottom: 0;
+    height: auto;
   }
 
   @media screen and (min-width: 1280px) {
-    height: 478px;
     width: 375px;
   }
 `;
@@ -49,6 +49,7 @@ export const Thumb = styled.div`
 export const FilmInfo = styled.div`
   @media screen and (min-width: 768px) {
     width: 264px;
+    flex-grow: 1;
   }
 
   @media screen and (min-width: 1280px) {
@@ -120,6 +121,7 @@ export const AboutDescription = styled.p`
   font-size: 12px;
   line-height: 1.67;
 `;
+
 export const Vote = styled.span`
   display: inline-block;
   text-align: center;
@@ -143,7 +145,7 @@ export const VoteCount = styled.span`
 
 export const BtnsList = styled.ul`
   display: flex;
-  justify-content: center;
+  justify-content: start;
   column-gap: 20px;
 
   @media screen and (min-width: 1280px) {
@@ -151,5 +153,3 @@ export const BtnsList = styled.ul`
     justify-content: start;
   }
 `;
-
-// export const CardLink = styled(Link)``;

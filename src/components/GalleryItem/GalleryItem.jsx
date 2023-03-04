@@ -32,7 +32,7 @@ export const GalleryItem = ({ item }) => {
         <Poster src={src} alt={title} loading="lazy" />
         <Title>{convertedTitle}</Title>
         <Text>
-          {genresList} | {year}
+          {genresList} {genresList && '|'} {year}
         </Text>
       </CardLink>
 
